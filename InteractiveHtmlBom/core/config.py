@@ -103,6 +103,8 @@ class Config:
                 ','.join(self.board_variant_blacklist)))
         self.dnp_field = f.Read('dnp_field', self.dnp_field)
 
+        self.save_to_file = True
+
     def save(self):
         f = FileConfig(localFilename=self.config_file)
 
@@ -330,6 +332,8 @@ class Config:
         self.board_variant_whitelist = args.variants_whitelist
         self.board_variant_blacklist = args.variants_blacklist
         self.dnp_field = args.dnp_field
+
+        self.save_to_file = true
 
     def get_html_config(self):
         import json
